@@ -1,0 +1,127 @@
+import React, { useState, useEffect } from 'react';
+import { Icon, Link } from './components/Shared';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Industries from './pages/Industries';
+import { productBrands } from './data/productsData';
+
+export default function App() {
+  const [menu, setMenu] = useState(false);
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const onLocationChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener('popstate', onLocationChange);
+    return () => window.removeEventListener('popstate', onLocationChange);
+  }, []);
+
+  let page;
+  if (currentPath === '/products') {
+    page = <Products />;
+  } else if (currentPath === '/industries') {
+    page = <Industries />;
+  } else {
+    page = <Home />;
+  }
+  
+  return (
+    <div>
+      <div className="topbar">
+        <div>ENGINEERED FOR INDUSTRY · BUILT FOR INDIA</div>
+        <div className="top-links">
+          <span>ISO 9001:2015</span>
+          <span>Pan-India Support</span>
+          <span>Mon–Sat · 9:00–18:00</span>
+        </div>
+      </div>
+      
+      <header className="header">
+        <div className="container nav">
+          <Link to="/" className="brand" onClick={() => setMenu(false)}>
+            <img src="/assets/teknomac-logo.png" alt="Teknomac" />
+            <span>TEKNOMAC</span>
+          </Link>
+          
+          <nav className={menu ? 'open' : ''}>
+            <Link to="/" onClick={() => setMenu(false)}>Home</Link>
+            
+            <div className="nav-item has-dropdown">
+              <Link to="/products" onClick={() => setMenu(false)}>Products</Link>
+              <div className="dropdown-menu">
+                {productBrands.map(brand => (
+                  <div key={brand.brandName} className="dropdown-item has-sub-dropdown">
+                    <Link to="/products" onClick={() => setMenu(false)}>{brand.brandName}</Link>
+                    <div className="sub-dropdown-menu">
+                      {brand.sections.map(section => (
+                        <Link 
+                          key={section.sectionName} 
+                          to={`/products#${section.sectionName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} 
+                          onClick={() => setMenu(false)}
+                        >
+                          {section.sectionName}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <Link to="/industries" onClick={() => setMenu(false)}>Industries</Link>
+            <Link to="/#about" onClick={() => setMenu(false)}>About</Link>
+            <Link to="/#contact" onClick={() => setMenu(false)}>Contact</Link>
+          </nav>
+          
+          <Link to="/#contact" className="nav-cta" onClick={() => setMenu(false)}>
+            Request a Quote <Icon name="arrow" size={17} />
+          </Link>
+          
+          <button className="hamb" onClick={() => setMenu(!menu)}>
+            {menu ? <Icon name="x" /> : <Icon name="menu" />}
+          </button>
+        </div>
+      </header>
+
+      <main>
+        {page}
+      </main>
+
+      <footer className="footer">
+        <div className="container footer-grid">
+          <div>
+            <div className="footer-brand">
+              <img src="/assets/teknomac-logo.png" alt="Teknomac" />
+              <span>TEKNOMAC</span>
+            </div>
+            <p>Engineered machinery and power transmission solutions for demanding industries.</p>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <Link to="/products">Products</Link>
+            <Link to="/industries">Industries</Link>
+            <Link to="/#about">About</Link>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <span>Power Transmission</span>
+            <span>Braking & Safety</span>
+            <span>Material Handling</span>
+            <span>Process Equipment</span>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <span>+91 90000 12345</span>
+            <span>hello@teknomac.in</span>
+            <span>Hyderabad, India</span>
+          </div>
+        </div>
+        <div className="container copyright">
+          <span>© 2026 Teknomac. Demo website — all product names/specifications are illustrative.</span>
+          <span>Designed for a modern industrial brand.</span>
+        </div>
+      </footer>
+    </div>
+  );
+}
