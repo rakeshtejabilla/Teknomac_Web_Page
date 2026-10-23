@@ -2135,5 +2135,256 @@ export const productBrands = [
         ]
       }
     ]
+  },
+  {
+    "brandName": "PITSON GEARS",
+    "brandDesc": "High-precision gearing solutions, low-backlash servo gearboxes, harmonic drives, and specialized extruder gearboxes.",
+    "sections": [
+      {
+        "sectionName": "Precision & Low-Backlash Gearboxes",
+        "types": [
+          {
+            "name": "Strain Wave - Harmonic Gearbox",
+            "image": "/uploads/pitson/strain-wave-harmonic-gearbox.png",
+            "description": [
+              "Zero backlash high-precision strain wave gearing",
+              "High single-stage reduction ratios (30:1 up to 160:1)",
+              "Ultra-compact footprint with high torque density",
+              "Exceptional positioning accuracy and repeatability",
+              "Engineered for robotics, medical equipment, semiconductor machinery, and aerospace"
+            ]
+          },
+          {
+            "name": "NWP Series Precision LowBacklash Worm Gearbox",
+            "image": "/uploads/pitson/nwp-series.png",
+            "description": [
+              "Precision low backlash adjustable down to < 1 arcmin",
+              "Dual lead precision worm and bronze wheel design",
+              "Reduction ratios from 5:1 to 100:1",
+              "Input shaft with motor coupling adapter; output with shrink disc or keyway",
+              "High torsional stiffness, high radial/axial load capacities, and quiet running"
+            ],
+            "subTypes": [
+              {
+                "name": "NWP 25",
+                "image": "/uploads/pitson/nwp-series.png",
+                "description": "Precision low-backlash worm gearbox size 25, compact servo input with ratio range 5:1 to 60:1."
+              },
+              {
+                "name": "NWP 35",
+                "image": "/uploads/pitson/nwp-series.png",
+                "description": "Precision low-backlash worm gearbox size 35, high positioning accuracy and rigid bearing support."
+              },
+              {
+                "name": "NWP 45",
+                "image": "/uploads/pitson/nwp-series.png",
+                "description": "Precision low-backlash worm gearbox size 45, versatile mounting with dual lead worm technology."
+              },
+              {
+                "name": "NWP 50",
+                "image": "/uploads/pitson/nwp-series.png",
+                "description": "Precision low-backlash worm gearbox size 50, optimal thermal dissipation and high acceleration torque."
+              },
+              {
+                "name": "NWP 55",
+                "image": "/uploads/pitson/nwp-series.png",
+                "description": "Precision low-backlash worm gearbox size 55, heavy-duty servo flange and backlash adjustment."
+              },
+              {
+                "name": "NWP 63",
+                "image": "/uploads/pitson/nwp-series.png",
+                "description": "Precision low-backlash worm gearbox size 63, high continuous output torque and low noise."
+              },
+              {
+                "name": "NWP 75",
+                "image": "/uploads/pitson/nwp-series.png",
+                "description": "Precision low-backlash worm gearbox size 75, robust housing for demanding automated indexing."
+              },
+              {
+                "name": "NWP 90",
+                "image": "/uploads/pitson/nwp-series.png",
+                "description": "Precision low-backlash worm gearbox size 90, high shock resistance and heavy payload capability."
+              },
+              {
+                "name": "NWP 110",
+                "image": "/uploads/pitson/nwp-series.png",
+                "description": "Precision low-backlash worm gearbox size 110, maximum torque rating and high moment stiffness."
+              }
+            ]
+          },
+          {
+            "name": "PTC Series Fine-Precision Gearbox (0.1 ArcMin Backlash)",
+            "image": "/uploads/pitson/ptc-series.png",
+            "description": [
+              "Ultra-precision motion control with backlash ≤ 0.1 ArcMin",
+              "High torsional rigidity and extreme shock load capacity",
+              "Compact direct servo mounting with hollow/solid shaft options",
+              "Ideal for rotary indexers, machine tool tool-changers, and satellite antennas"
+            ]
+          },
+          {
+            "name": "W Series High-Torque Precision Gearbox",
+            "image": "/uploads/pitson/w-series.png",
+            "description": [
+              "High continuous torque transmission and heavy shock resilience",
+              "Optimized tooth geometry for high efficiency and smooth motion",
+              "High thermal dissipation capacity for heavy-duty duty cycles",
+              "Engineered for heavy industrial automation, packaging lines, and indexing systems"
+            ]
+          },
+          {
+            "name": "Precision Spiral Bevel Gearbox",
+            "image": "/uploads/pitson/precision-spiral-bevel.png",
+            "description": [
+              "Right-angle transmission with up to 98% operating efficiency",
+              "Case-hardened and precision-lapped Gleason spiral bevel gear pairs",
+              "Low vibration, quiet operation, and minimal backlash",
+              "Multi-shaft configurations and versatile universal mounting faces"
+            ]
+          },
+          {
+            "name": "NW Series Low Backlash Servo-Worm Gearbox",
+            "image": "/uploads/pitson/nw-series-servo-worm.png",
+            "description": [
+              "Designed specifically for high-dynamic servo motor integration",
+              "Low backlash gear mesh for precise cyclic positioning",
+              "Right-angle 90-degree configuration saves machine installation space",
+              "Motor input flange with clamping hub for easy, backlash-free connection"
+            ]
+          },
+          {
+            "name": "PTL Series Low Backlash Servo-Planetary",
+            "image": "/uploads/pitson/ptl-series.png",
+            "description": [
+              "High power density planetary gearing with low backlash",
+              "High efficiency (≥ 95%) and balanced multi-planet load sharing",
+              "High radial and axial shaft load handling capability",
+              "Universal motor adapter compatible with all major servo motor brands"
+            ]
+          }
+        ]
+      },
+      {
+        "sectionName": "Actuators & Motion Control",
+        "types": [
+          {
+            "name": "Strain Wave - Harmonic ACTUATORS",
+            "image": "/uploads/pitson/strain-wave-actuators.png",
+            "description": [
+              "Integrated package combining strain wave gearbox, servo motor, and high-res encoder",
+              "Center through-hole / hollow shaft design for internal wiring and cabling",
+              "Ultra-lightweight and compact design with exceptional torque-to-weight ratio",
+              "Plug-and-play servo control for collaborative robots (cobots), AGVs, and exoskeletons"
+            ]
+          },
+          {
+            "name": "ROTARY ACTUATOR Helical Servo Drive",
+            "image": "/uploads/pitson/rotary-actuator.png",
+            "description": [
+              "Precision rotary actuator utilizing helical servo gearing technology",
+              "Large center aperture for cable, pneumatic, or slip-ring feedthrough",
+              "High tilt and moment stiffness for direct heavy turntable mounting",
+              "High angular positioning repeatability and smooth rotational dynamics"
+            ]
+          }
+        ]
+      },
+      {
+        "sectionName": "Linear Systems & Special Gearboxes",
+        "types": [
+          {
+            "name": "Precision Rack & Pinion",
+            "image": "/uploads/pitson/precision-rack-pinion.png",
+            "description": [
+              "High feed force linear drive system for high-speed CNC machines and gantries",
+              "Induction hardened and precision-ground tooth profiles (DIN 5 / DIN 6 quality)",
+              "Straight and helical tooth configurations with matched low-backlash pinions",
+              "Continuous positioning precision over extended travel axes"
+            ]
+          },
+          {
+            "name": "Stainless Bevel/Worm Gearbox",
+            "image": "/uploads/pitson/stainless-bevel-worm.png",
+            "description": [
+              "Full AISI 304 / AISI 316 stainless steel housing, shafts, and fasteners",
+              "Hygienic smooth-surface design without pockets or dead zones",
+              "IP66 / IP69K washdown protection for food, beverage, and pharmaceutical facilities",
+              "Corrosion-proof construction resistant to caustic washdown chemicals"
+            ]
+          },
+          {
+            "name": "Customized Designs",
+            "image": "/uploads/pitson/customized-designs.png",
+            "description": [
+              "Tailored engineering and custom-built gearboxes to exact application specs",
+              "Custom gear ratios, mounting configurations, and multi-speed options",
+              "In-house engineering, finite element analysis (FEA), and prototyping",
+              "Drop-in replacement designs for obsolete or discontinued transmissions"
+            ]
+          }
+        ]
+      },
+      {
+        "sectionName": "Extruder Gearboxes",
+        "types": [
+          {
+            "name": "Single Screw Extruder Gearbox",
+            "image": "/uploads/pitson/single-screw-extruder.png",
+            "description": [
+              "Heavy-duty helical gearbox designed specifically for single screw extruders",
+              "Integrated high-capacity spherical / tandem thrust bearing assembly",
+              "Hardened and ground alloy steel helical gears with high service factors",
+              "Integrated cooling coil and forced-feed oil lubrication options"
+            ]
+          },
+          {
+            "name": "Counter-rotating Parallel / Conical Twin Screw",
+            "image": "/uploads/pitson/counter-rotating-twin-screw.png",
+            "description": [
+              "Engineered for counter-rotating parallel and conical twin screw extruders",
+              "Symmetrical high-torque distribution between twin output shafts",
+              "High axial pressure absorption for PVC pipe, profile, and sheet processing",
+              "Heavy-duty cast iron housing with precision thrust pack bearings"
+            ]
+          },
+          {
+            "name": "Co-rotating Parallel Twin Screw",
+            "image": "/uploads/pitson/co-rotating-twin-screw.png",
+            "description": [
+              "High-torque density gearing for compounding and masterbatch twin screw extruders",
+              "Multi-stage precision gear train ensures balanced torque distribution",
+              "Tandem thrust bearing packages handle extreme extrusion pressures",
+              "High-efficiency forced oil circulation system with integrated heat exchanger"
+            ]
+          }
+        ]
+      },
+      {
+        "sectionName": "Industrial Drives & Loose Gears",
+        "types": [
+          {
+            "name": "NW Series Worm Gearbox, Geared Motors",
+            "image": "/uploads/pitson/nw-series-geared-motors.png",
+            "description": [
+              "Die-cast aluminum alloy housings (sizes 025 to 090) and rugged cast iron (sizes 110 to 150)",
+              "Universal mounting faces on all sides for flexible machine orientation",
+              "Case-hardened worm shaft paired with centrifugally cast bronze worm wheel",
+              "Available as standalone reduction gearbox or integrated geared motor"
+            ]
+          },
+          {
+            "name": "Spare Parts, Loose Gears, Custom Gears",
+            "image": "/uploads/pitson/spare-parts-loose-gears.png",
+            "description": [
+              "Precision Helical & Spur Gears (Modules 1 to 16)",
+              "Straight and Spiral Bevel Gears (Modules up to 20)",
+              "Precision Worm and Worm Wheels (Modules up to 18)",
+              "Precision Rack and Pinion Sets (Modules up to 14)",
+              "Custom timing pulleys, sprockets, splined shafts, and internal rings"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];

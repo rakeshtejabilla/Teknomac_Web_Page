@@ -47,7 +47,7 @@ export default function Products() {
                     <article className="product-card" key={type.name} style={{ '--delay': `${i * 45}ms`, cursor: 'pointer' }} onClick={() => setModal(type)}>
                       <div className="product-visual">
                         <span className="product-cat">{section.sectionName}</span>
-                        {type.image && type.image.startsWith('/') ? (
+                        {type.image && (type.image.startsWith('/') || type.image.startsWith('http')) ? (
                           <img src={type.image} alt={type.name} style={{width: '100%', height: '100%', objectFit: 'contain', padding: '20px'}} />
                         ) : (
                           <MachineArt type={type.image} />
@@ -82,7 +82,7 @@ export default function Products() {
             <div className="modal" onClick={e => e.stopPropagation()}>
               <button className="modal-close" onClick={() => setModal(null)}><Icon name="x" /></button>
               <div className="modal-visual">
-                {modal.image && modal.image.startsWith('/') ? (
+                {modal.image && (modal.image.startsWith('/') || modal.image.startsWith('http')) ? (
                   <img src={modal.image} alt={modal.name} style={{width: '100%', height: '100%', objectFit: 'contain', padding: '30px'}} />
                 ) : (
                   <MachineArt type={modal.image} />
