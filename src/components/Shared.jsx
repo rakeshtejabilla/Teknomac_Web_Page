@@ -37,7 +37,7 @@ export function Link({ to, children, className, onClick }) {
           if (window.location.pathname !== path && path !== '') {
             // Navigate to new page first
             e.preventDefault();
-            window.history.pushState({}, '', path);
+            window.history.pushState({}, '', to);
             window.dispatchEvent(new PopStateEvent('popstate'));
             
             // Wait for render, then scroll to hash
@@ -48,6 +48,7 @@ export function Link({ to, children, className, onClick }) {
           } else {
             // Already on the page, just scroll smoothly
             e.preventDefault();
+            window.history.pushState({}, '', to);
             const el = document.getElementById(hash);
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }

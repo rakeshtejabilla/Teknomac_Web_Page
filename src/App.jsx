@@ -52,17 +52,25 @@ export default function App() {
               <div className="dropdown-menu">
                 {productBrands.map(brand => (
                   <div key={brand.brandName} className="dropdown-item has-sub-dropdown">
-                    <Link to="/products" onClick={() => setMenu(false)}>{brand.brandName}</Link>
+                    <Link 
+                      to={`/products#${brand.brandName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} 
+                      onClick={() => setMenu(false)}
+                    >
+                      {brand.brandName}
+                    </Link>
                     <div className="sub-dropdown-menu">
-                      {brand.sections.map(section => (
-                        <Link 
-                          key={section.sectionName} 
-                          to={`/products#${section.sectionName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} 
-                          onClick={() => setMenu(false)}
-                        >
-                          {section.sectionName}
-                        </Link>
-                      ))}
+                      {brand.sections.map(section => {
+                        const sectionId = `${brand.brandName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${section.sectionName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+                        return (
+                          <Link 
+                            key={section.sectionName} 
+                            to={`/products#${sectionId}`} 
+                            onClick={() => setMenu(false)}
+                          >
+                            {section.sectionName}
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
                 ))}
