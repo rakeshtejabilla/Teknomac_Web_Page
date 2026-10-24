@@ -2386,5 +2386,99 @@ export const productBrands = [
         ]
       }
     ]
+  },
+  {
+    "brandName": "TOP GEAR TRANSMISSION",
+    "brandDesc": "Premier manufacturer of precision planetary gearboxes, geared motors, sugar mill drives, and specialized process drives.",
+    "sections": [
+      {
+        "sectionName": "Planetary Gearboxes & Drives",
+        "types": [
+          {
+            "name": "Planetary Gearbox",
+            "image": "/uploads/topgear/planetary-gearbox.png",
+            "description": [
+              "High-torque compact gear system with central sun gear, planetary gears, and outer ring gear",
+              "Modular construction with versatile mounting options: Foot, Flange, and Shaft mounting",
+              "Multiple input & output configurations: Solid, Hollow, Splined, and Shrink Disc",
+              "High overhang load capacity with co-axial drive arrangement",
+              "Special series available with heavy-duty taper roller bearings for extreme radial and thrust loads"
+            ]
+          },
+          {
+            "name": "Planetary Geared Motors",
+            "image": "/uploads/topgear/planetary-geared-motors.png",
+            "description": [
+              "Power Rating: 0.17 kW to 75 kW | Torque Capacity: 100 Nm to 1000 kNm",
+              "Wide output speed range from 0.02 RPM up to 400 RPM",
+              "Adaptable to IEC frame electric motors with IP55 protection, S4 class duty, 50 Hz / 440 V",
+              "High torque-to-weight ratio with modular, compact space-saving design",
+              "Available with fail-safe electromagnetic brake and backstop arrangement upon request"
+            ]
+          },
+          {
+            "name": "Bevel Planetary Drives",
+            "image": "/uploads/topgear/bevel-planetary-drives.png",
+            "description": [
+              "Right-angle 90-degree drive combining high-efficiency spiral bevel gearing with planetary torque multiplication",
+              "Offered in 14 basic series sizes designed to fit tight machine space constraints",
+              "Multi-direction motor orientation with foot, flange, or shaft mounting options",
+              "Mounting versions available with IEC hollow frame as well as solid input shafts",
+              "Extended shaft options available for direct encoder or brake installation"
+            ]
+          }
+        ]
+      },
+      {
+        "sectionName": "Specialized Industrial Drives",
+        "types": [
+          {
+            "name": "Planetary Mixer",
+            "image": "/uploads/topgear/planetary-mixer.png",
+            "description": [
+              "Aggregate mixing capacity: 300 to 2000 Kg | Scrapper arm speed: 12-14 RPM",
+              "High mixture homogeneity achieved in significantly shorter mixing cycle times",
+              "Dual mixing arms rotate on their own axes while simultaneously revolving around the central gearbox axis",
+              "Different rotating speeds for mixing arms and scrapper arm ensure superior material dispersion",
+              "Widely adopted for concrete block & paver manufacturing, chemical batching, and foundry mixtures"
+            ]
+          },
+          {
+            "name": "Sugar Mill Drive",
+            "image": "/uploads/topgear/sugar-mill-drive.png",
+            "description": [
+              "Heavy-duty mill drive series engineered specifically for high-capacity sugar cane crushing mills",
+              "Available in MD (Mill Drive) for full mill rolls and SMD (Shaft Mounted Mill Drive) for individual GRPF / TRPF rollers",
+              "Supplied with dedicated individual forced lubrication system and high-pressure rigid mounting couplings",
+              "Equipped with flexible torque arm to absorb peak shock torques and shaft deflection misalignments",
+              "Substantially higher energy efficiency and lower power consumption compared to conventional open gearing"
+            ]
+          },
+          {
+            "name": "Auxiliary Gearbox",
+            "image": "/uploads/topgear/auxiliary-gearbox.png",
+            "description": [
+              "Power Rating: 37 kW to 150 kW | Torque Capacity: 1400 Nm to 10000 Nm | Gear Ratio: 1:1 to 1:7.5",
+              "Two-speed heavy-duty transmission unit for power transfer between vehicle engine and wheel axles",
+              "Available with mechanical or pneumatic shifting arrangements for 2WD and 4WD configurations",
+              "Special dual output design capable of driving both front and rear axles simultaneously",
+              "High load carrying capacity for heavy radial and thrust loads, with integrated speedometer sensor port"
+            ]
+          },
+          {
+            "name": "Centrifuge Drive",
+            "image": "/uploads/topgear/centrifuge-drive.png",
+            "description": [
+              "Power Rating: 20 kW to 150 kW | Torque Capacity: 2000 Nm to 15000 Nm | Differential Ratios: 25:1 to 159:1",
+              "Purpose-built drive for high-speed industrial decanter centrifuges in solid-liquid separation",
+              "Dynamically balanced rotating assemblies with precision gears manufactured to DIN Class 5 standards",
+              "Whisper-quiet high-speed performance with long operating service life",
+              "Filled with synthetic long-life lubricant engineered for continuous high-temperature and harsh environments"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
+
