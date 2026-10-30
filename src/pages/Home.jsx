@@ -1,11 +1,46 @@
 import React, { useState } from 'react';
 import { Icon, MachineArt, Link } from '../components/Shared';
 
-const industries = [
-  { name: 'Mining & Minerals', icon: '⛏', text: 'Drive, braking, pumping and separation solutions for demanding mineral processing environments.' },
-  { name: 'Cement & Aggregates', icon: '◈', text: 'Reliable power transmission for crushers, mills, conveyors, bucket elevators and kilns.' },
-  { name: 'Bulk Material Handling', icon: '⇢', text: 'Engineered conveyor drives, backstops, couplings and braking systems for continuous flow.' },
-  { name: 'Manufacturing', icon: '⚙', text: 'Compact drive and transmission packages for production lines, mixers and process equipment.' }
+const industriesList = [
+  { name: 'Agriculture Industries', icon: '🌾' },
+  { name: 'Food Processing', icon: '🏭' },
+  { name: 'Metal Production', icon: '⚙️' },
+  { name: 'Pharmaceutical', icon: '💊' },
+  { name: 'Bio Pharma & Life Sciences', icon: '🔬' },
+  { name: 'Chemical Industries', icon: '⚗️' },
+  { name: 'Textile Industries', icon: '🧵' },
+  { name: 'Cement Industries', icon: '◈' },
+  { name: 'Power Industries', icon: '⚡' },
+  { name: 'Rubber & Plastics', icon: '🔩' },
+  { name: 'Cranes & Material Handling', icon: '🏗️' },
+  { name: 'Construction & Mining', icon: '⛏️' },
+  { name: 'Pulp & Paper', icon: '📄' },
+  { name: 'Defense & Minerals', icon: '🛡️' },
+];
+
+const strengths = [
+  { num: '01', title: 'Application Engineering', desc: 'Specialized expertise in application engineering and solution-based selling — we start with your requirement, not a catalogue.' },
+  { num: '02', title: '30+ Years Leadership', desc: 'Led by technocrats with over 30 years of rich experience in industrial sales, marketing, and project management across India.' },
+  { num: '03', title: 'In-House Service', desc: 'In-house service capabilities supported by trusted service partner networks, ensuring rapid on-site response across regions.' },
+];
+
+const team = [
+  {
+    name: 'M.A. Choudary',
+    role: 'Founder & Director — Technical',
+    exp: '31+ Years',
+    bio: 'Senior Mechanical Engineer with over 31 years of experience in design, production, project management, and global business expansion. Previously served as Head of Engineering – Asia Pacific and Country Head at leading American and European companies.',
+    phone: '+91-9441204774',
+    email: 'mac@teknomac.in',
+  },
+  {
+    name: 'B.R. Viswanath',
+    role: 'Co-Founder — Sales & Marketing',
+    exp: '29+ Years',
+    bio: 'Mechanical Engineer with 29 years of experience. Held leadership roles at Georg Fischer Disa, NORD Drivesystems, and MGM Varvel. As a founding member of NORD India, grew the company to €15 million in turnover managing India, Sri Lanka, and Bangladesh.',
+    phone: '9100930177',
+    email: 'info@teknomac.in',
+  },
 ];
 
 export default function Home() {
@@ -17,17 +52,17 @@ export default function Home() {
         <div className="hero-grid" />
         <div className="container hero-inner">
           <div className="hero-copy">
-            <div className="eyebrow"><span /> ENGINEERING • POWER TRANSMISSION • PROCESS</div>
-            <h1>Machinery that <em>moves</em> industry forward.</h1>
-            <p>Teknomac delivers dependable industrial machinery and engineered drive solutions for mining, material handling, cement, manufacturing and process industries.</p>
+            <div className="eyebrow"><span /> TEKNOMAC ENGINEERS • YOUR TRUSTED PARTNER FOR STRATEGIC EXPANSION</div>
+            <h1>World-class technology <em>at your service.</em></h1>
+            <p>Established in 2019, Teknomac Engineers delivers high-quality, service-oriented power transmission and industrial automation solutions across PAN India — from OEM and EU to MRO markets, backed by 29+ years of team expertise.</p>
             <div className="hero-actions">
               <Link to="/products" className="btn primary">Explore Solutions <Icon name="arrow" size={18} /></Link>
-              <a href="#about" className="btn ghost">Why Teknomac</a>
+              <a href="#about" className="btn ghost">Why Teknomac Engineers</a>
             </div>
             <div className="hero-proof">
-              <div><strong>25+</strong><span>Engineered<br />Solutions</span></div>
-              <div><strong>4</strong><span>Core<br />Industries</span></div>
-              <div><strong>24/7</strong><span>Critical Support<br />Ready</span></div>
+              <div><strong>29+</strong><span>Years of Team<br />Expertise</span></div>
+              <div><strong>14</strong><span>Industries<br />Served</span></div>
+              <div><strong>PAN</strong><span>India<br />Coverage</span></div>
             </div>
           </div>
           <div className="hero-machine">
@@ -44,16 +79,16 @@ export default function Home() {
 
       <section className="trust">
         <div className="container trust-inner">
-          <span>APPLICATION-DRIVEN ENGINEERING</span><i /> <span>POWER TRANSMISSION</span><i /> <span>MATERIAL HANDLING</span><i /> <span>PROCESS EQUIPMENT</span>
+          <span>POWER TRANSMISSION</span><i /> <span>INDUSTRIAL AUTOMATION</span><i /> <span>OEM · EU · MRO MARKETS</span><i /> <span>PAN INDIA COVERAGE</span>
         </div>
       </section>
 
       <section className="stats">
         <div className="container stats-grid">
-          <div><strong>100+</strong><span>Industrial<br />Applications</span></div>
-          <div><strong>15+</strong><span>Years of<br />Engineering Focus</span></div>
-          <div><strong>99.2%</strong><span>Targeted<br />Equipment Uptime</span></div>
-          <div><strong>48h</strong><span>Typical<br />Response Window</span></div>
+          <div><strong>2019</strong><span>Founded<br />Nov 15th</span></div>
+          <div><strong>29+</strong><span>Years of<br />Team Expertise</span></div>
+          <div><strong>14</strong><span>Industries<br />We Serve</span></div>
+          <div><strong>€579K</strong><span>FY 2024–25<br />Target Turnover</span></div>
         </div>
       </section>
 
@@ -68,15 +103,84 @@ export default function Home() {
             <div className="about-stat s3"><b>03</b><span>Support for<br />the long run</span></div>
           </div>
           <div className="about-copy">
-            <div className="eyebrow"><span /> THE TEKNOMAC APPROACH</div>
-            <h2>Industrial reliability, without the <em>industrial complexity.</em></h2>
-            <p>Teknomac is a demo brand created for this website concept. Our approach combines application understanding with practical machinery selection, technical support and lifecycle thinking.</p>
+            <div className="eyebrow"><span /> THE TEKNOMAC ENGINEERS ADVANTAGE</div>
+            <h2>Your trusted partner for <em>strategic expansion.</em></h2>
+            <p>Established on 15th November 2019, Teknomac Engineers is committed to delivering high-quality, service-oriented technological solutions across PAN India. We specialize in supporting mature, legacy, and end-of-life products — ensuring customers receive reliable and tailored support throughout their equipment lifecycle.</p>
+            <p style={{ marginTop: '12px', color: 'var(--ink-2)', fontSize: '15px' }}>We cater to OEM, EU, and MRO markets, offering both standard and customized solutions. Our team is backed by over 29 years of hands-on expertise, enabling us to design and implement automated control systems that enhance safety, productivity, and operational efficiency.</p>
             <div className="feature-list">
-              <div><b>01</b><div><strong>Application-first design</strong><span>We start with load, speed, environment and duty cycle—not a catalogue number.</span></div></div>
-              <div><b>02</b><div><strong>Practical serviceability</strong><span>Accessible designs, modular components and clear maintenance planning.</span></div></div>
-              <div><b>03</b><div><strong>Performance you can measure</strong><span>Focus on efficiency, uptime, safety and total cost of ownership.</span></div></div>
+              {strengths.map(s => (
+                <div key={s.num}><b>{s.num}</b><div><strong>{s.title}</strong><span>{s.desc}</span></div></div>
+              ))}
             </div>
             <a href="#contact" className="btn primary">Talk to an Engineer <Icon name="arrow" size={18} /></a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── MISSION ─────────────────────────────────────── */}
+      <section className="mission-section">
+        <div className="container mission-inner">
+          <div className="mission-badge">OUR MISSION</div>
+          <h2 className="mission-text">&ldquo;To build systems that benefit all stakeholders, grounded in <em>honesty, respect, and integrity.</em>&rdquo;</h2>
+          <div className="mission-pillars">
+            <div><span>🤝</span><strong>Honesty</strong></div>
+            <div><span>🌟</span><strong>Respect</strong></div>
+            <div><span>⚖️</span><strong>Integrity</strong></div>
+            <div><span>🚀</span><strong>Innovation</strong></div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── INDUSTRIES ──────────────────────────────────── */}
+      <section className="industries-home">
+        <div className="container">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow"><span /> INDUSTRIES WE SERVE</div>
+              <h2>One partner. <em>Many tough environments.</em></h2>
+            </div>
+            <p>From Pharma to Power, we serve 14 key sectors across India with precision-engineered solutions and trusted global brands.</p>
+          </div>
+          <div className="industries-tag-grid">
+            {industriesList.map((ind) => (
+              <div key={ind.name} className="industry-tag">
+                <span>{ind.icon}</span>
+                <strong>{ind.name}</strong>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <Link to="/industries" className="btn primary">View All Industries <Icon name="arrow" size={18} /></Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── LEADERSHIP ──────────────────────────────────── */}
+      <section className="team-section">
+        <div className="container">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow"><span /> OUR LEADERSHIP</div>
+              <h2>Experience that <em>drives results.</em></h2>
+            </div>
+            <p>Our leadership team brings a combined 60+ years of industrial expertise across India and global markets.</p>
+          </div>
+          <div className="team-grid">
+            {team.map(m => (
+              <div key={m.name} className="team-card">
+                <div className="team-avatar">{m.name.split(' ').map(n => n[0]).join('')}</div>
+                <div className="team-info">
+                  <h3>{m.name}</h3>
+                  <span className="team-role">{m.role}</span>
+                  <span className="team-exp">{m.exp} Experience</span>
+                  <p>{m.bio}</p>
+                  <div className="team-contacts">
+                    <span>📞 {m.phone}</span>
+                    <span>✉ {m.email}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -95,13 +199,48 @@ export default function Home() {
       <section id="contact" className="section contact">
         <div className="container contact-grid">
           <div className="contact-copy">
-            <div className="eyebrow"><span /> CONTACT TEKNOMAC</div>
+            <div className="eyebrow"><span /> CONTACT TEKNOMAC ENGINEERS</div>
             <h2>Tell us what you need to <em>move.</em></h2>
-            <p>Use the form for a demo enquiry. Replace the contact details below with your real company information when the site goes live.</p>
+            <p>Experience the Power Transmission Solutions at its finest. Reach out directly to our engineering and technical team for product specifications, application sizing, and commercial quotes.</p>
             <div className="contact-items">
-              <div><span className="ci"><Icon name="phone" size={18} /></span><div><small>CALL</small><strong>+91 90000 12345</strong></div></div>
-              <div><span className="ci"><Icon name="mail" size={18} /></span><div><small>EMAIL</small><strong>hello@teknomac.in</strong></div></div>
-              <div><span className="ci">⌖</span><div><small>OFFICE</small><strong>Industrial Estate, Hyderabad, India</strong></div></div>
+              <div>
+                <span className="ci"><Icon name="phone" size={18} /></span>
+                <div>
+                  <small>TECHNICAL DIRECTOR</small>
+                  <strong>M.A. Choudary</strong>
+                  <span style={{ fontSize: '11px', color: 'var(--green)', fontWeight: '600', display: 'block' }}>Founder & Director - Technical</span>
+                  <strong>+91-9441204774</strong>
+                </div>
+              </div>
+              <div>
+                <span className="ci"><Icon name="phone" size={18} /></span>
+                <div>
+                  <small>OFFICE & SALES</small>
+                  <strong>9100930177, 7989084748</strong>
+                </div>
+              </div>
+              <div>
+                <span className="ci"><Icon name="mail" size={18} /></span>
+                <div>
+                  <small>EMAIL</small>
+                  <strong>info@teknomac.in</strong>
+                  <div style={{ marginTop: '2px' }}><strong>mac@teknomac.in</strong></div>
+                </div>
+              </div>
+              <div>
+                <span className="ci">⌖</span>
+                <div>
+                  <small>HEAD OFFICE</small>
+                  <strong>#1-3-79, F.No. 17, 2nd Floor, Jaya Nagar, St. No. 6, Habsiguda, Hyderabad-500 007, Telangana, India.</strong>
+                </div>
+              </div>
+              {/* <div>
+                <span className="ci">🌐</span>
+                <div>
+                  <small>WEBSITE</small>
+                  <strong>www.teknomac.in</strong>
+                </div>
+              </div> */}
             </div>
           </div>
           <form className="contact-form" onSubmit={e => { e.preventDefault(); setSent(true); setTimeout(() => setSent(false), 4500) }}>
@@ -123,7 +262,8 @@ export default function Home() {
                 <option>Gear units / geared motors</option>
                 <option>Couplings / brakes / backstops</option>
                 <option>Conveyor drives / motorized pulleys</option>
-                <option>Slurry pumps / hydrocyclones</option>
+                <option>Industrial automation systems</option>
+                <option>Gearbox overhauling / repair</option>
                 <option>Custom machinery requirement</option>
               </select>
             </label>

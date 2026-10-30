@@ -31,32 +31,40 @@ export function Link({ to, children, className, onClick }) {
       href={to} 
       className={className} 
       onClick={(e) => {
-        if (to.startsWith('/#') || to.includes('#')) {
-          const [path, hash] = to.split('#');
-          
-          if (window.location.pathname !== path && path !== '') {
-            // Navigate to new page first
-            e.preventDefault();
+        e.preventDefault();
+
+        // Check if there's a hash in the destination
+        const hashIndex = to.indexOf('#');
+        const path = hashIndex !== -1 ? to.slice(0, hashIndex) : to;
+        const hash = hashIndex !== -1 ? to.slice(hashIndex + 1) : null;
+        const currentPath = window.location.pathname;
+
+        if (hash) {
+          // Has a section anchor (e.g. /#about, /#contact)
+          const targetPath = path === '' ? '/' : path;
+
+          if (currentPath !== targetPath) {
+            // Navigate to the target page first, then scroll
             window.history.pushState({}, '', to);
             window.dispatchEvent(new PopStateEvent('popstate'));
-            
-            // Wait for render, then scroll to hash
             setTimeout(() => {
               const el = document.getElementById(hash);
               if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }, 100);
+              else window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 120);
           } else {
-            // Already on the page, just scroll smoothly
-            e.preventDefault();
+            // Already on the right page — just scroll to section
             window.history.pushState({}, '', to);
             const el = document.getElementById(hash);
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }
         } else {
-          e.preventDefault();
+          // No hash — navigate to page and scroll to top
           window.history.pushState({}, '', to);
           window.dispatchEvent(new PopStateEvent('popstate'));
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
         if (onClick) onClick();
       }}
     >

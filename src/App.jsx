@@ -29,19 +29,18 @@ export default function App() {
   return (
     <div>
       <div className="topbar">
-        <div>ENGINEERED FOR INDUSTRY · BUILT FOR INDIA</div>
+        <div>TEKNOMAC ENGINEERS · Experience the Power Transmission Solutions at its finest</div>
         <div className="top-links">
-          <span>ISO 9001:2015</span>
-          <span>Pan-India Support</span>
-          <span>Mon–Sat · 9:00–18:00</span>
+          <span>📞 +91 9441204774 / 9100930177</span>
+          <span>✉ info@teknomac.in</span>
+          <span>📍 Habsiguda, Hyderabad</span>
         </div>
       </div>
       
       <header className="header">
         <div className="container nav">
           <Link to="/" className="brand" onClick={() => setMenu(false)}>
-            <img src="/assets/teknomac-logo.png" alt="Teknomac" />
-            <span>TEKNOMAC</span>
+            <img src="/assets/teknomac-logo.png" alt="Teknomac Engineers" />
           </Link>
           
           <nav className={menu ? 'open' : ''}>
@@ -100,34 +99,41 @@ export default function App() {
         <div className="container footer-grid">
           <div>
             <div className="footer-brand">
-              <img src="/assets/teknomac-logo.png" alt="Teknomac" />
-              <span>TEKNOMAC</span>
+              <img src="/assets/teknomac-logo-footer.png" alt="Teknomac Engineers" />
             </div>
-            <p>Engineered machinery and power transmission solutions for demanding industries.</p>
+            <p><strong>TEKNOMAC ENGINEERS</strong> — Experience the Power Transmission Solutions at its finest. Engineered machinery and power transmission solutions for demanding industries.</p>
           </div>
           <div>
             <h4>Explore</h4>
             <Link to="/products">Products</Link>
             <Link to="/industries">Industries</Link>
-            <Link to="/#about">About</Link>
+            <Link to="/#about">About Us</Link>
+            <Link to="/#contact">Contact Us</Link>
           </div>
           <div>
             <h4>Solutions</h4>
             <span>Power Transmission</span>
-            <span>Braking & Safety</span>
-            <span>Material Handling</span>
-            <span>Process Equipment</span>
+            <span>Braking & Safety Systems</span>
+            <span>Shaft-Hub Connections</span>
+            <span>Industrial Gearboxes</span>
           </div>
           <div>
-            <h4>Contact</h4>
-            <span>+91 90000 12345</span>
-            <span>hello@teknomac.in</span>
-            <span>Hyderabad, India</span>
+            <h4>Contact Details</h4>
+            <span><strong>M.A. Choudary</strong></span>
+            <span style={{ color: 'var(--lime)', fontSize: '11px', fontWeight: '600' }}>Founder & Director - Technical</span>
+            <span>📞 +91-9441204774</span>
+            <span>📞 9100930177 / 7989084748</span>
+            <span>✉ mac@teknomac.in</span>
+            <span>✉ info@teknomac.in</span>
+            {/* <span>🌐 www.teknomac.in</span> */}
+            <span style={{ marginTop: '8px', lineHeight: '1.5', display: 'block', color: '#c5d8cd' }}>
+              📍 #1-3-79, F.No. 17, 2nd Floor, Jaya Nagar, St. No. 6, Habsiguda, Hyderabad-500 007. Telangana, India.
+            </span>
           </div>
         </div>
         <div className="container copyright">
-          <span>© 2026 Teknomac. Demo website — all product names/specifications are illustrative.</span>
-          <span>Designed for a modern industrial brand.</span>
+          <span>© 2026 TEKNOMAC ENGINEERS. All rights reserved.</span>
+          <span>Experience the Power Transmission Solutions at its finest</span>
         </div>
       </footer>
     </div>

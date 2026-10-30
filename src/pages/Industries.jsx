@@ -2,10 +2,20 @@ import React from 'react';
 import { Icon, Link } from '../components/Shared';
 
 const industries = [
-  { name: 'Mining & Minerals', icon: '⛏', text: 'Drive, braking, pumping and separation solutions for demanding mineral processing environments.' },
-  { name: 'Cement & Aggregates', icon: '◈', text: 'Reliable power transmission for crushers, mills, conveyors, bucket elevators and kilns.' },
-  { name: 'Bulk Material Handling', icon: '⇢', text: 'Engineered conveyor drives, backstops, couplings and braking systems for continuous flow.' },
-  { name: 'Manufacturing', icon: '⚙', text: 'Compact drive and transmission packages for production lines, mixers and process equipment.' }
+  { name: 'Agriculture Industries', icon: '🌾', text: 'Power transmission and drive solutions for irrigation systems, harvesters, and agro-processing equipment.' },
+  { name: 'Food Processing', icon: '🏭', text: 'Hygienic drive systems, gearboxes, and coupling solutions for food & beverage processing and packaging lines.' },
+  { name: 'Metal Production', icon: '⚙️', text: 'Robust gear units and braking systems for rolling mills, furnaces, continuous casting, and metal handling equipment.' },
+  { name: 'Pharmaceutical', icon: '💊', text: 'Precision drive solutions for cleanroom environments, tablet presses, mixers, and pharmaceutical process equipment.' },
+  { name: 'Bio Pharma & Life Sciences', icon: '🔬', text: 'Reliable automation and drive systems for bio-reactors, filling systems, and sensitive life-science applications.' },
+  { name: 'Chemical Industries', icon: '⚗️', text: 'Corrosion-resistant drives, agitators, and pump solutions for demanding chemical processing environments.' },
+  { name: 'Textile Industries', icon: '🧵', text: 'Precision speed control and drive systems for spinning, weaving, and textile finishing machinery.' },
+  { name: 'Cement Industries', icon: '◈', text: 'High-torque gear units for crushers, mills, conveyors, bucket elevators, and rotary kilns in cement plants.' },
+  { name: 'Power Industries', icon: '⚡', text: 'Heavy-duty drive and coupling solutions for turbines, generators, coal handling, and power plant equipment.' },
+  { name: 'Rubber & Plastics', icon: '🔩', text: 'Extruder drives, mixer gearboxes, and coupling solutions for rubber and plastics processing machinery.' },
+  { name: 'Cranes & Material Handling', icon: '🏗️', text: 'Brake systems, backstops, and drive solutions for overhead cranes, hoists, and material handling equipment.' },
+  { name: 'Construction & Mining', icon: '⛏️', text: 'Heavy-duty drives, brakes, and pumping solutions for excavators, crushers, and mining conveyors.' },
+  { name: 'Pulp & Paper', icon: '📄', text: 'Specialized gear units, couplings, and drive systems for paper machines, refiners, and pulping processes.' },
+  { name: 'Defense & Minerals', icon: '🛡️', text: 'Ruggedized drive and transmission solutions for defense vehicles, mineral processing, and extraction systems.' },
 ];
 
 export default function Industries() {
@@ -23,7 +33,7 @@ export default function Industries() {
           <div className="industry-grid">
             {industries.map((x, i) => (
               <article key={x.name} className="industry-card">
-                <div className="industry-number">0{i + 1}</div>
+                <div className="industry-number">{String(i + 1).padStart(2, '0')}</div>
                 <div className="industry-icon">{x.icon}</div>
                 <h3>{x.name}</h3>
                 <p>{x.text}</p>
