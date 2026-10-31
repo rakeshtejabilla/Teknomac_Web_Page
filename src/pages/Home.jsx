@@ -2,20 +2,32 @@ import React, { useState } from 'react';
 import { Icon, MachineArt, Link } from '../components/Shared';
 
 const industriesList = [
-  { name: 'Agriculture Industries', icon: '🌾' },
-  { name: 'Food Processing', icon: '🏭' },
-  { name: 'Metal Production', icon: '⚙️' },
-  { name: 'Pharmaceutical', icon: '💊' },
-  { name: 'Bio Pharma & Life Sciences', icon: '🔬' },
-  { name: 'Chemical Industries', icon: '⚗️' },
-  { name: 'Textile Industries', icon: '🧵' },
-  { name: 'Cement Industries', icon: '◈' },
-  { name: 'Power Industries', icon: '⚡' },
-  { name: 'Rubber & Plastics', icon: '🔩' },
-  { name: 'Cranes & Material Handling', icon: '🏗️' },
-  { name: 'Construction & Mining', icon: '⛏️' },
+  { name: 'Industrial Gears & Motors', icon: '⚙️' },
+  { name: 'Sugar Industry', icon: '🎋' },
+  { name: 'Off Road Vehicles & Earthmovers', icon: '🚜' },
+  { name: 'Stone & Marble Industry', icon: '🪨' },
+  { name: 'Environment & Recycling', icon: '♻️' },
+  { name: 'Robotics & Automation', icon: '🤖' },
+  { name: 'Aerospace Technology', icon: '✈️' },
+  { name: 'Defense & Security', icon: '🛡️' },
+  { name: 'AGV & Autonomous Vehicles', icon: '🚙' },
+  { name: 'Medical Technology', icon: '🏥' },
+  { name: 'Semiconductor Systems', icon: '🔬' },
+  { name: 'Mining & Mineral', icon: '⛏️' },
+  { name: 'Harbour & Industrial Cranes', icon: '🏗️' },
+  { name: 'Steel & Metal Plants', icon: '🏭' },
+  { name: 'Cement Plants', icon: '◈' },
+  { name: 'Material Handling & Logistics', icon: '📦' },
+  { name: 'Energy & Wind Power', icon: '⚡' },
+  { name: 'Measuring & Metrology', icon: '📐' },
+  { name: 'Woodworking Machinery', icon: '🪵' },
+  { name: 'Marine & Offshore', icon: '⚓' },
+  { name: 'E-Bike Drives', icon: '🚲' },
+  { name: 'Mobile Hybrid & E-Mobility', icon: '🔌' },
   { name: 'Pulp & Paper', icon: '📄' },
-  { name: 'Defense & Minerals', icon: '🛡️' },
+  { name: 'Food & Packaging Machines', icon: '🥫' },
+  { name: 'Machine Tools & CNC', icon: '🔧' },
+  { name: 'General Machine Building', icon: '🔩' },
 ];
 
 const strengths = [
@@ -61,7 +73,7 @@ export default function Home() {
             </div>
             <div className="hero-proof">
               <div><strong>29+</strong><span>Years of Team<br />Expertise</span></div>
-              <div><strong>14</strong><span>Industries<br />Served</span></div>
+              <div><strong>55+</strong><span>Industries<br />Served</span></div>
               <div><strong>PAN</strong><span>India<br />Coverage</span></div>
             </div>
           </div>
@@ -87,7 +99,7 @@ export default function Home() {
         <div className="container stats-grid">
           <div><strong>2019</strong><span>Founded<br />Nov 15th</span></div>
           <div><strong>29+</strong><span>Years of<br />Team Expertise</span></div>
-          <div><strong>14</strong><span>Industries<br />We Serve</span></div>
+          <div><strong>55+</strong><span>Industries<br />We Serve</span></div>
           <div><strong>€579K</strong><span>FY 2024–25<br />Target Turnover</span></div>
         </div>
       </section>
@@ -139,14 +151,14 @@ export default function Home() {
               <div className="eyebrow"><span /> INDUSTRIES WE SERVE</div>
               <h2>One partner. <em>Many tough environments.</em></h2>
             </div>
-            <p>From Pharma to Power, we serve 14 key sectors across India with precision-engineered solutions and trusted global brands.</p>
+            <p>From heavy mining, sugar mills, and earthmovers to robotics, semiconductor systems, and medical technologies, we serve 55+ key sectors across India with precision-engineered solutions and trusted global brands.</p>
           </div>
           <div className="industries-tag-grid">
             {industriesList.map((ind) => (
-              <div key={ind.name} className="industry-tag">
+              <Link key={ind.name} to="/industries" className="industry-tag">
                 <span>{ind.icon}</span>
                 <strong>{ind.name}</strong>
-              </div>
+              </Link>
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
@@ -202,75 +214,104 @@ export default function Home() {
             <div className="eyebrow"><span /> CONTACT TEKNOMAC ENGINEERS</div>
             <h2>Tell us what you need to <em>move.</em></h2>
             <p>Experience the Power Transmission Solutions at its finest. Reach out directly to our engineering and technical team for product specifications, application sizing, and commercial quotes.</p>
-            <div className="contact-items">
-              <div>
-                <span className="ci"><Icon name="phone" size={18} /></span>
+
+            <div className="contact-why">
+              <div className="contact-why-item">
+                <div className="cwy-icon">⚡</div>
                 <div>
+                  <strong>Fast Response</strong>
+                  <span>We respond to all technical and commercial enquiries within one business day.</span>
+                </div>
+              </div>
+              <div className="contact-why-item">
+                <div className="cwy-icon">🔧</div>
+                <div>
+                  <strong>29+ Years of Expertise</strong>
+                  <span>Hands-on experience in power transmission, automation, and industrial control systems.</span>
+                </div>
+              </div>
+              <div className="contact-why-item">
+                <div className="cwy-icon">🏭</div>
+                <div>
+                  <strong>PAN India Support</strong>
+                  <span>Serving OEM, EU and MRO markets across India with on-site and remote support.</span>
+                </div>
+              </div>
+              <div className="contact-why-item">
+                <div className="cwy-icon">🎯</div>
+                <div>
+                  <strong>Tailored Solutions</strong>
+                  <span>Standard catalogue products to fully customised systems — designed for your exact requirement.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="contact-hours">
+              <div className="contact-hours-header">
+                <span>🕐</span>
+                <strong>Business Hours</strong>
+              </div>
+              <div className="contact-hours-row"><span>Monday – Saturday</span><strong>9:00 AM – 6:00 PM IST</strong></div>
+              <div className="contact-hours-row"><span>Sunday</span><strong>Closed</strong></div>
+              <p className="contact-hours-note">For urgent requirements, reach our technical director directly on <a href="tel:+919441204774">+91-94412 04774</a>.</p>
+            </div>
+
+          </div>
+          <div className="contact-info-panel">
+            <div className="cip-header">
+              <span className="cip-badge">GET IN TOUCH</span>
+              <h3>Reach out to us directly</h3>
+              <p>Our engineering and sales team are ready to assist you with product specifications, application sizing, and commercial quotes. Contact us through any of the channels below.</p>
+            </div>
+
+            <div className="cip-cards">
+              <div className="cip-card">
+                <div className="cip-card-icon"><Icon name="phone" size={22} /></div>
+                <div className="cip-card-body">
                   <small>TECHNICAL DIRECTOR</small>
                   <strong>M.A. Choudary</strong>
-                  <span style={{ fontSize: '11px', color: 'var(--green)', fontWeight: '600', display: 'block' }}>Founder & Director - Technical</span>
-                  <strong>+91-9441204774</strong>
+                  <span>Founder &amp; Director – Technical</span>
+                  <a href="tel:+919441204774" className="cip-link">+91-94412 04774</a>
                 </div>
               </div>
-              <div>
-                <span className="ci"><Icon name="phone" size={18} /></span>
-                <div>
-                  <small>OFFICE & SALES</small>
-                  <strong>9100930177, 7989084748</strong>
+
+              <div className="cip-card">
+                <div className="cip-card-icon"><Icon name="phone" size={22} /></div>
+                <div className="cip-card-body">
+                  <small>OFFICE &amp; SALES</small>
+                  <strong>Sales &amp; Support Team</strong>
+                  <span>Mon–Sat, 9 AM – 6 PM IST</span>
+                  <a href="tel:+919100930177" className="cip-link">+91-91009 30177</a>
+                  <a href="tel:+917989084748" className="cip-link">+91-79890 84748</a>
                 </div>
               </div>
-              <div>
-                <span className="ci"><Icon name="mail" size={18} /></span>
-                <div>
-                  <small>EMAIL</small>
-                  <strong>info@teknomac.in</strong>
-                  <div style={{ marginTop: '2px' }}><strong>mac@teknomac.in</strong></div>
+
+              <div className="cip-card">
+                <div className="cip-card-icon"><Icon name="mail" size={22} /></div>
+                <div className="cip-card-body">
+                  <small>EMAIL US</small>
+                  <strong>General &amp; Business Enquiries</strong>
+                  <span>We reply within one business day</span>
+                  <a href="mailto:info@teknomac.in" className="cip-link">info@teknomac.in</a>
+                  <a href="mailto:mac@teknomac.in" className="cip-link">mac@teknomac.in</a>
                 </div>
               </div>
-              <div>
-                <span className="ci">⌖</span>
-                <div>
+
+              <div className="cip-card">
+                <div className="cip-card-icon" style={{ fontSize: '22px', lineHeight: 1 }}>⌖</div>
+                <div className="cip-card-body">
                   <small>HEAD OFFICE</small>
-                  <strong>#1-3-79, F.No. 17, 2nd Floor, Jaya Nagar, St. No. 6, Habsiguda, Hyderabad-500 007, Telangana, India.</strong>
+                  <strong>Teknomac Engineers</strong>
+                  <span>#1-3-79, F.No. 17, 2nd Floor, Jaya Nagar,<br />St. No. 6, Habsiguda, Hyderabad – 500 007,<br />Telangana, India.</span>
                 </div>
               </div>
-              {/* <div>
-                <span className="ci">🌐</span>
-                <div>
-                  <small>WEBSITE</small>
-                  <strong>www.teknomac.in</strong>
-                </div>
-              </div> */}
+            </div>
+
+            <div className="cip-footer">
+              <span>🕐</span>
+              <p>For urgent requirements or on-site support, call our technical director directly. For product catalogues and application queries, email us at <a href="mailto:info@teknomac.in">info@teknomac.in</a>.</p>
             </div>
           </div>
-          <form className="contact-form" onSubmit={e => { e.preventDefault(); setSent(true); setTimeout(() => setSent(false), 4500) }}>
-            <div className="form-title">
-              <span>01</span>
-              <div><strong>Request a consultation</strong><small>Typical response within one business day.</small></div>
-            </div>
-            <div className="form-row">
-              <label>Full name<input required placeholder="Your name" /></label>
-              <label>Company<input placeholder="Company name" /></label>
-            </div>
-            <div className="form-row">
-              <label>Email<input type="email" required placeholder="you@company.com" /></label>
-              <label>Phone<input placeholder="+91 ..." /></label>
-            </div>
-            <label>What are you looking for?
-              <select defaultValue="">
-                <option value="" disabled>Select a solution</option>
-                <option>Gear units / geared motors</option>
-                <option>Couplings / brakes / backstops</option>
-                <option>Conveyor drives / motorized pulleys</option>
-                <option>Industrial automation systems</option>
-                <option>Gearbox overhauling / repair</option>
-                <option>Custom machinery requirement</option>
-              </select>
-            </label>
-            <label>Application details<textarea rows="4" placeholder="Tell us about load, speed, material, duty cycle or any known specifications..." /></label>
-            <button className="btn primary full" type="submit">{sent ? 'Enquiry sent ✓' : 'Send enquiry'} <Icon name="arrow" size={18} /></button>
-            {sent && <div className="success">Thanks! This demo form is working. Connect it to your backend/email service for production use.</div>}
-          </form>
         </div>
       </section>
     </>

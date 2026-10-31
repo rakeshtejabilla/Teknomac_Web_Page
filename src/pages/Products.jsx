@@ -5,6 +5,16 @@ import { productBrands } from '../data/productsData';
 export default function Products() {
   const [modal, setModal] = useState(null);
 
+  const goToContact = () => {
+    setModal(null);
+    window.history.pushState({}, '', '/#contact');
+    window.dispatchEvent(new PopStateEvent('popstate'));
+    setTimeout(() => {
+      const el = document.getElementById('contact');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 150);
+  };
+
   useEffect(() => {
     if (window.location.hash) {
       const id = window.location.hash.slice(1);
@@ -99,7 +109,7 @@ export default function Products() {
                 ) : (
                   <p>{modal.description || modal.desc}</p>
                 )}
-                <button className="btn primary" onClick={() => { setModal(null); window.location.href='/#contact'; }}>
+                <button className="btn primary" onClick={goToContact}>
                   Request this solution <Icon name="arrow" size={18} />
                 </button>
               </div>
@@ -109,7 +119,7 @@ export default function Products() {
               <button className="modal-close" onClick={() => setModal(null)}><Icon name="x" /></button>
               <div className="modal-subtypes-header">
                 <h2>{modal.name}</h2>
-                <button className="btn primary" onClick={() => { setModal(null); window.location.href='/#contact'; }}>
+                <button className="btn primary" onClick={goToContact}>
                   Request this solution <Icon name="arrow" size={18} />
                 </button>
               </div>
